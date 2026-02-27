@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>esamesofia</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+    <!-- navbar  -->
+    <nav class="navbar fixed-top navbar-expand-sm shadow-sm">
+        <div class="container">
+            <a href="#home" class="logo">
+                Sofia <span>Manzoni</span>
+            </a>
+
+            <button id="menuToggle" class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#servizi" class="nav-link">Servizi</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero d-flex flex-column justify-content-center align-items-center" id="home">
+
+            <h1 class="hero_title">
+                Sofia Manzoni<br>
+                <i>Graphic & Visual Designer</i>
+            </h1>
+
+            <!-- CAROUSEL sotto il titolo -->
+            <div class="img-carousel mt-5">
+                <div class="carousel-track">
+                    <img src="./images/amore.jpg" alt="">
+                    <img src="./images/kaleido.jpg" alt="">
+                    <img src="./images/manzoni.jpg" alt="">
+                    <img src="./images/Schermata 2026-01-21 alle 18.15.01.png" alt="">
+
+                    <!-- duplicato per loop infinito -->
+                    <img src="./images/amore.jpg" alt="">
+                    <img src="./images/kaleido.jpg" alt="">
+                    <img src="./images/manzoni.jpg" alt="">
+                    <img src="./images/Schermata 2026-01-21 alle 18.15.01.png" alt="">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="services-section" id="servizi">
+
+            <div class="container text-center">
+                
+                <p class="services-quote">
+                    Design per me significa fare scelte: di <I>forma</I>, di <I>colore</I>, di <I>significato</I>. <br>
+                    <I>Niente è casuale</I>, tutto comunica. </br>
+                </p>
+
+                <div class="services-boxes">
+                <div class="service-box"><span>Brand Identity</span></div>
+                <div class="service-box"><span>Social Media</span></div>
+                <div class="service-box"><span>Progettazione UX & UI</span></div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <section class="portfolio-section" id="portfolio">
+
+  <div class="portfolio-item">
+
+    <div class="portfolio-info">
+
+      <div class="portfolio-title">
+        <h2>Kaleido Magazine</h2>
+        <span class="portfolio-year">2024</span>
+      </div>
+
+      <div class="portfolio-meta">
+        <div><span>Type</span><p>Entryway Bench</p></div>
+        <div><span>Category</span><p>Furniture</p></div>
+        <div><span>Client</span><p>Prototype</p></div>
+        <div><span>Material</span><p>Anodised Aluminum</p></div>
+        <div><span>Year</span><p>2020</p></div>
+        <div><span>Features</span><p>—</p></div>
+      </div>
+
+    </div>
+
+    <div class="portfolio-images">
+      <img src="./images/darling1.jpg" alt="">
+      <img src="./images/darling2.jpg" alt="">
+    </div>
+
+  </div>
+
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
