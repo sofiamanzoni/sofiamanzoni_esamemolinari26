@@ -18,108 +18,190 @@
 
 <body>
 
-    <!-- navbar  -->
-    <nav class="navbar fixed-top navbar-expand-sm shadow-sm">
-        <div class="container">
-            <a href="#home" class="logo">
-                Sofia <span>Manzoni</span>
-            </a>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-sm fixed-top">
+  <div class="container">
+    <a href="#home" class="logo">Sofia <span>Manzoni</span></a>
 
-            <button id="menuToggle" class="navbar-toggler" type="button" 
-                data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#servizi" class="nav-link">Servizi</a></li>
-                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <main>
-
-        <!-- HERO -->
-        <section class="hero d-flex flex-column justify-content-center align-items-center" id="home">
-
-            <h1 class="hero_title">
-                Sofia Manzoni<br>
-                <i>Graphic & Visual Designer</i>
-            </h1>
-
-            <!-- CAROUSEL sotto il titolo -->
-            <div class="img-carousel mt-5">
-                <div class="carousel-track">
-                    <img src="images/img1.jpg" alt="img">
-                    <img src="images/img1.jpg" alt="img">
-                    <img src="images/img1.jpg" alt="img">
-                    <img src="images/img1.jpg" alt="img">
-
-                    <!-- duplicato per loop infinito -->
-                    <img src="images/img1.jpg" alt="img">
-                    <img src="images/img1.jpg" alt="img">
-                    <img src="images/img1.jpg" alt="img">
-                    <img src="images/img1.jpg" alt="img">
-                </div>
-            </div>
-
-        </section>
-
-        <section class="services-section" id="servizi">
-
-            <div class="container text-center">
-                
-                <p class="services-quote">
-                    Design per me significa fare scelte: di <I>forma</I>, di <I>colore</I>, di <I>significato</I>. <br>
-                    <I>Niente è casuale</I>, tutto comunica. </br>
-                </p>
-
-                <div class="services-boxes">
-                <div class="service-box"><span>Brand Identity</span></div>
-                <div class="service-box"><span>Social Media</span></div>
-                <div class="service-box"><span>Progettazione UX & UI</span></div>
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <section class="portfolio-section" id="portfolio">
-
-  <div class="portfolio-item">
-
-    <div class="portfolio-info">
-
-      <div class="portfolio-title">
-        <h2>Kaleido Magazine</h2>
-        <span class="portfolio-year">2024</span>
-      </div>
-
-      <div class="portfolio-meta">
-        <div><span>Type</span><p>Entryway Bench</p></div>
-        <div><span>Category</span><p>Furniture</p></div>
-        <div><span>Client</span><p>Prototype</p></div>
-        <div><span>Material</span><p>Anodised Aluminum</p></div>
-        <div><span>Year</span><p>2020</p></div>
-        <div><span>Features</span><p>—</p></div>
-      </div>
-
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#servizi" class="nav-link">Servizi</a></li>
+        <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
     </div>
+  </div>
+</nav>
 
-    <div class="portfolio-images">
-      <img src="images/img1.jpg" alt="img">
-      <img src="images/img1.jpg" alt="img">
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+
+        <h1 class="hero_title text-end">
+          Sofia Manzoni<br>
+          <i>Graphic & Visual Designer</i>
+        </h1>
+
+      </div>
     </div>
+  </div>
 
+  <!-- CAROUSEL FUORI DAL CONTAINER -->
+  <div class="img-carousel">
+    <div class="carousel-track">
+      <img src="images/artdirection.jpg">
+      <img src="images/img1.jpg">
+      <img src="images/img1.jpg">
+      <img src="images/img1.jpg">
+
+      <!-- duplicato per loop -->
+      <img src="images/img1.jpg">
+      <img src="images/img1.jpg">
+      <img src="images/img1.jpg">
+      <img src="images/img1.jpg">
+    </div>
   </div>
 
 </section>
+
+<!-- SERVICES -->
+<section class="section-padding" id="servizi">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+
+        <p class="services-quote">
+          Design per me significa fare scelte: di <i>forma</i>, di <i>colore</i>, di <i>significato</i>.<br>
+          <i>Niente è casuale</i>, tutto comunica.
+        </p>
+
+        <div class="row g-4 mt-4">
+          <div class="col-md-4">
+            <div class="box">Brand Identity</div>
+          </div>
+          <div class="col-md-4">
+            <div class="box">Social Media</div>
+          </div>
+          <div class="col-md-4">
+            <div class="box">Progettazione UX & UI</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section-padding" id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+
+        <!-- PROGETTO 1 -->
+        <div class="portfolio-project">
+          <div class="row">
+
+            <div class="col-md-4">
+              <h2 class="portfolio-title">Kaleido Magazine</h2>
+              <span class="portfolio-year">2024</span>
+
+              <div class="portfolio-meta mt-4">
+                <p><strong>Type</strong><br>Editorial Design</p>
+                <p><strong>Software</strong><br>InDesign - Illustrator - Photoshop - Procreate</p>
+              </div>
+            </div>
+
+            <div class="col-md-8">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <img src="images/artdirection.jpg" class="portfolio-img">
+                </div>
+                <div class="col-md-6">
+                  <img src="images/img1.jpg" class="portfolio-img">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PROGETTO 2 -->
+        <div class="portfolio-project">
+          <div class="row">
+
+            <div class="col-md-4">
+              <h2 class="portfolio-title">Bloom Identity</h2>
+              <span class="portfolio-year">2023</span>
+
+              <div class="portfolio-meta mt-4">
+                <p><strong>Type</strong><br>Brand Identity</p>
+                <p><strong>Software</strong><br>Illustrator - Photoshop</p>
+              </div>
+            </div>
+
+            <div class="col-md-8">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <img src="images/img1.jpg" class="portfolio-img">
+                </div>
+                <div class="col-md-6">
+                  <img src="images/img1.jpg" class="portfolio-img">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PROGETTO 3 -->
+        <div class="portfolio-project">
+          <div class="row">
+
+            <div class="col-md-4">
+              <h2 class="portfolio-title">Wave Campaign</h2>
+              <span class="portfolio-year">2022</span>
+
+              <div class="portfolio-meta mt-4">
+                <p><strong>Type</strong><br>Social Media Campaign</p>
+                <p><strong>Software</strong><br>Photoshop - After Effects</p>
+              </div>
+            </div>
+
+            <div class="col-md-8">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <img src="images/img1.jpg" class="portfolio-img">
+                </div>
+                <div class="col-md-6">
+                  <img src="images/img1.jpg" class="portfolio-img">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
