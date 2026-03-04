@@ -7,13 +7,14 @@ body {
 
 .navbar {
   background: #fffffa;
+  border-bottom: 1px solid #de1312;
   padding: 20px 4vw; /* stesso padding laterale delle sezioni */
   width:100%;
   z-index:1000;
 }
 
 .navbar-toggler {
-  border: 2px solid #de1312;
+  border: 1px solid #de1312;
 }
 
 .navbar-toggler:focus {
@@ -22,6 +23,21 @@ body {
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23de1312' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar.scrolled {
+  padding: 10px 4vw;
+  transition: 0.3s ease;
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 1.5px;
+  background: #de1312;
+  width: 0%;
+  z-index: 2000;
 }
 .logo {
   font-size: 22px;
@@ -257,4 +273,58 @@ a:hover{
 .contact-btn:hover {
   background: #de121223;
   color: #de1312;
+}
+
+/* FOOTER */
+
+.footer-custom {
+  background: #de121223;
+  border-top: 1px solid #de1312;
+  color: #de1312;
+  padding: 40px 4vw;
+}
+
+.footer-custom .container {
+  width: 100%;
+}
+
+.footer-title {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.footer-sub {
+  font-size: 18px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* BACK TO TOP - RECTANGLE */
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #fffffa;
+  color: #de1312;
+  border: 1px solid #de1312;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 2000;
+}
+
+.back-to-top:hover {
+  transform: translateY(-4px);
+  background: #fde1dd;
+  border: 1px solid #de1312;
+  color: #de1312;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
 }

@@ -26,3 +26,34 @@ function animateCarousel() {
 }
 
 animateCarousel();
+
+window.addEventListener("scroll", function() {
+  const navbar = document.querySelector(".navbar");
+  navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+window.addEventListener("scroll", () => {
+  const scrollTop = document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (scrollTop / height) * 100;
+  document.querySelector(".scroll-progress").style.width = scrolled + "%";
+});
+
+const backToTop = document.getElementById("backToTop");
+
+// Mostra la freccia dopo un po' di scroll
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTop.classList.add("show");
+  } else {
+    backToTop.classList.remove("show");
+  }
+});
+
+// Scrolla in alto quando clicchi
+backToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
