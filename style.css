@@ -60,6 +60,64 @@ a:hover{
   flex-shrink: 0;
 }
 
+/* ABOUT */
+
+#about {
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  align-items: center;   /* CENTRATURA VERTICALE */
+}
+
+#about .container {
+  padding: 0 4vw;
+}
+
+.about-img-wrapper {
+  height: 250px;              /* IDENTICA ai box servizi */
+  overflow: hidden;
+}
+
+.about-img {
+  width: 100%;
+  height: 250px;              /* IDENTICA ai box servizi */
+  object-fit: cover;
+}
+
+/* ABOUT – PERCORSO */
+
+.about-quote {
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 5px;   /* ancora più vicino */
+  line-height: 1.3;
+  margin-top:-4px;
+}
+
+.about-education {
+  margin-top: 20px;        /* zero spazio extra */
+}
+
+.about-item {
+  margin-bottom: 20px;   /* quasi attaccati */
+}
+
+.about-role {
+  font-size: 20px;
+  margin: 0;            /* rimuove margine default del p */
+}
+
+.about-role strong {
+  font-weight: 500;
+}
+
+.about-year {
+  font-size: 20px;
+  opacity: 0.6;
+  display: block;
+  margin-top: -2px;     /* avvicina ancora di più */
+}
+
 /* SERVICES + PORTFOLIO BOX SIZE IDENTICO */
 .box,
 .portfolio-img {
