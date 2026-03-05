@@ -1,33 +1,44 @@
+:root {
+  --primary: #de1312;
+  --background: #fffffa;
+  --secondary: #de121223;
+  --secondary-light:#fde1dd;
+}
+
 body {
   font-family: 'Instrument Serif', serif;
-  background: #fffffa;
-  color: #de1312;
+  background: var(--background);
+  color: var(--primary);
   padding-top: 80px;
 }
 
+.side-padding {
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
 .navbar {
-  background: #fffffa;
-  border-bottom: 1px solid #de1312;
-  padding: 20px 4vw; /* stesso padding laterale delle sezioni */
-  width:100%;
-  z-index:1000;
+  background: var(--background);
+  border-bottom: 1px solid var(--primary);
+  padding: 20px 0;
+  transition: padding 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 10px 0;
 }
 
 .navbar-toggler {
-  border: 1px solid #de1312;
+  border: 1px solid var(--primary);
+  border-radius: 0;
 }
 
 .navbar-toggler:focus {
-  box-shadow: none; /* opzionale, toglie glow blu */
+  box-shadow: none; 
 }
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23de1312' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-.navbar.scrolled {
-  padding: 10px 4vw;
-  transition: 0.3s ease;
 }
 
 .scroll-progress {
@@ -35,31 +46,31 @@ body {
   top: 0;
   left: 0;
   height: 1.5px;
-  background: #de1312;
+  background: var(--primary);
   width: 0%;
   z-index: 2000;
 }
 .logo {
   font-size: 22px;
   text-decoration: none;
-  color: #de1312;
+  color: var(--primary);
 }
 
 .nav-link {
-  color: #de1312 !important;
+  color: var(--primary) !important;
   font-size: 18px;
 }
 
 .section-padding {
-  padding: 100px 4vw;
+  padding: 100px 0;
 }
 
 a:hover{
-   color:#de1312;
-   text-decoration: #de1312 underline;
+   color:var(--primary);
+   text-decoration: var(--primary) underline;
 }
 
-/* HERO */
+/* hero */
 .hero_title {
   font-size: 48px;
   font-weight: 400;
@@ -67,10 +78,10 @@ a:hover{
 }
 
 .hero {
-  padding: 160px 4vw 80px 4vw;
+  padding: 160px 0vw 80px 0vw;
 }
 
-/* CAROUSEL */
+/* carosello */
 .img-carousel {
   overflow: hidden;
   width: 100%;
@@ -89,13 +100,12 @@ a:hover{
   flex-shrink: 0;
 }
 
-/* ABOUT */
+/* about */
 
 #about {
   min-height: 100vh;
-  padding: 0 4vw;
   display: flex;
-  align-items: center;   /* centra verticalmente tutto */
+  align-items: center;
 }
 
 #about .container {
@@ -106,57 +116,57 @@ a:hover{
   align-items: center;
 }
 
-.about-img-wrapper {
-  height: 250px;              /* IDENTICA ai box servizi */
+.about-img-wrapper {              
   overflow: hidden;
 }
 
 .about-img {
-  width: 100%;
-  height: 250px;              /* IDENTICA ai box servizi */
+  width: 100%;              
   object-fit: cover;
 }
-
-/* ABOUT – PERCORSO */
 
 .about-quote {
   font-size: 40px;
   font-weight: 400;
-  margin-bottom: 5px;   /* ancora più vicino */
+  margin-bottom: 5px;   
   line-height: 1.3;
   margin-top:-4px;
 }
 
 .about-education {
-  margin-top: 20px;        /* zero spazio extra */
+  margin-top: 20px;       
 }
 
 .about-item {
-  margin-bottom: 20px;   /* quasi attaccati */
+  margin-bottom: 20px;   
 }
 
 .about-role {
   font-size: 20px;
-  margin: 0;            /* rimuove margine default del p */
+  margin: 0;           
 }
 
 .about-year {
   font-size: 20px;
   opacity: 0.6;
   display: block;
-  margin-top: -2px;     /* avvicina ancora di più */
+  margin-top: -2px;
 }
 
-/* SERVICES + PORTFOLIO BOX SIZE IDENTICO */
+/* dimensione immagini comuni */
 .box,
-.portfolio-img {
+.portfolio-img,
+.portfolio-img-wrapper,
+.about-img-wrapper,
+.about-img {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
 
+/* services */
 .box {
-  background: #de121223;
+  background: var(--secondary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -166,10 +176,10 @@ a:hover{
 }
 
 .box:hover {
-  outline: 2px solid #de1312;
+  outline: 2px solid var(--primary);
 }
 
-/* SERVICES */
+
 #servizi {
   min-height: 100vh;
   display: flex;
@@ -183,11 +193,11 @@ a:hover{
   line-height: 1.3;
 }
 
-/* PORTFOLIO */
+/* portfolio */
 
 #portfolio {
-  padding-top: 120px; /* ad esempio metà dello spazio originale */
-  padding-bottom: 50px; /* mantieni il padding sotto se vuoi */
+  padding-top: 120px; 
+  padding-bottom: 50px;
 }
 
 .portfolio-title {
@@ -209,17 +219,13 @@ a:hover{
   padding: 20px 0;
 }
 
-/* WRAPPER per evitare che lo zoom esca fuori */
+/* Wrapper per evitare che lo zoom esca fuori */
 .portfolio-img-wrapper {
-  height: 250px;
   overflow: hidden;
 }
 
 /* animazione */
 .portfolio-img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
   transition: transform 0.5s ease;
 }
 
@@ -227,7 +233,7 @@ a:hover{
   transform: scale(1.08);
 }
 
-/* CONTACT */
+/* Contact */
 
 #contact {
   min-height: 100vh;
@@ -242,46 +248,46 @@ a:hover{
 
 .custom-input {
   border: none;
-  border-bottom: 1px solid #de1312;
+  border-bottom: 1px solid var(--primary);
   border-radius: 0;
   background: transparent;
-  color: #de1312;
+  color: var(--primary);
   font-size: 20px;
   padding: 10px 0;
 }
 
 .custom-input:focus {
   box-shadow: none;
-  border-bottom: 1px solid #de1312;
+  border-bottom: 1px solid var(--primary);
   background: transparent;
-  color: #de1312;
+  color: var(--primary);
 }
 
 .custom-input::placeholder {
-  color: #de1312;
+  color: var(--primary);
   opacity: 1;
 }
 
 .contact-btn {
   background: transparent;
-  border: 1px solid #de1312;
-  color: #de1312;
+  border: 1px solid var(--primary);
+  color: var(--primary);
   padding: 10px 30px;
   transition: 0.3s ease;
 }
 
 .contact-btn:hover {
-  background: #de121223;
-  color: #de1312;
+  background: var(--secondary);
+  color: var(--primary);
 }
 
-/* FOOTER */
+/* footer */
 
 .footer-custom {
-  background: #de121223;
-  border-top: 1px solid #de1312;
-  color: #de1312;
-  padding: 40px 4vw;
+  background: var(--secondary);
+  border-top: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 40px 0;
 }
 
 .footer-custom .container {
@@ -299,29 +305,29 @@ a:hover{
   margin: 0;
 }
 
-/* BACK TO TOP - RECTANGLE */
+/* Back to top */
 
 .back-to-top {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: #fffffa;
-  color: #de1312;
-  border: 1px solid #de1312;
+  background: var(--background);
+  color: var(--primary);
+  border: 1px solid var(--primary);
   padding: 10px 20px;
   font-size: 18px;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  transition: 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 2000;
 }
 
 .back-to-top:hover {
   transform: translateY(-4px);
-  background: #fde1dd;
-  border: 1px solid #de1312;
-  color: #de1312;
+  background: var(--secondary-light);
+  border: 1px solid var(--primary);
+  color: var(--primary);
 }
 
 .back-to-top.show {
