@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel-track");
   const images = Array.from(track.children);
 
-  // Duplica le immagini per creare loop infinito
+ /* duplica le immagini per creare loop infinito */
   images.forEach(img => {
     const clone = img.cloneNode(true);
     track.appendChild(clone);
@@ -37,13 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const pageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrolled = (scrollTop / pageHeight) * 100;
 
-    // Barra progresso
+  /* barra progresso*/
     progressBar.style.width = scrolled + "%";
 
-    // Navbar effetto scrolled
+  /* navbar effetto scrolled*/
     navbar.classList.toggle("scrolled", scrollTop > 50);
 
-    // Bottone back-to-top
+  /* bottone back-to-top*/
     backToTop.classList.toggle("show", scrollTop > 300);
   });
 
