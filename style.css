@@ -206,6 +206,7 @@ padding:10px 0;
 .custom-input:focus{
 box-shadow:none;
 border-bottom:1px solid var(--primary);
+color:var(--primary);
 }
 
 .custom-input::placeholder{
